@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VHa-zC-NCs">
+                                <rect key="frame" x="16" y="60" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dza-VZ-l7O"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-IT-Q4p">
+                                <rect key="frame" x="16" y="110" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5BZ-Ss-IWT"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dNn-ZK-d5m">
+                                <rect key="frame" x="16" y="160" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mys-Xb-N8n"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7NQ-0Z-iqE">
+                                <rect key="frame" x="16" y="210" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hZ5-II-OBH"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGq-kL-1pt">
+                                <rect key="frame" x="16" y="832" width="382" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendFormButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DdC-E2-DBr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rGq-kL-1pt" secondAttribute="trailing" constant="16" id="6es-TT-gkX"/>
+                            <constraint firstItem="dNn-ZK-d5m" firstAttribute="top" secondItem="GWF-IT-Q4p" secondAttribute="bottom" constant="16" id="8FO-Zr-pg7"/>
+                            <constraint firstItem="VHa-zC-NCs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9L1-MZ-MqX"/>
+                            <constraint firstItem="GWF-IT-Q4p" firstAttribute="top" secondItem="VHa-zC-NCs" secondAttribute="bottom" constant="16" id="Fwd-8p-la5"/>
+                            <constraint firstItem="GWF-IT-Q4p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lg6-os-RnI"/>
+                            <constraint firstItem="7NQ-0Z-iqE" firstAttribute="top" secondItem="dNn-ZK-d5m" secondAttribute="bottom" constant="16" id="McT-mX-Xuh"/>
+                            <constraint firstItem="rGq-kL-1pt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="T2T-h3-hFD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GWF-IT-Q4p" secondAttribute="trailing" constant="16" id="cbI-2t-9dm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rGq-kL-1pt" secondAttribute="bottom" id="k1F-cW-fmZ"/>
+                            <constraint firstItem="VHa-zC-NCs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mr6-5U-t6y"/>
+                            <constraint firstItem="7NQ-0Z-iqE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nze-aD-boe"/>
+                            <constraint firstItem="dNn-ZK-d5m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qEq-Mq-GO9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VHa-zC-NCs" secondAttribute="trailing" constant="16" id="tKq-Ie-nGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7NQ-0Z-iqE" secondAttribute="trailing" constant="16" id="yB3-dz-hH1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dNn-ZK-d5m" secondAttribute="trailing" constant="16" id="yF2-dh-LQ7"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Pzz-n2-40i" appends="YES" id="JlQ-Fe-DzU"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBottomConstraint" destination="k1F-cW-fmZ" id="2Pg-Z3-US7"/>
+                        <outlet property="emailTextField" destination="GWF-IT-Q4p" id="WKT-kA-o9X"/>
+                        <outlet property="nameTextField" destination="VHa-zC-NCs" id="ozC-hc-GEv"/>
+                        <outlet property="passwordTextField" destination="7NQ-0Z-iqE" id="nqc-5Y-AA8"/>
+                        <outlet property="phoneNumberTextField" destination="dNn-ZK-d5m" id="gNL-LB-YL0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Pzz-n2-40i">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="BYZ-38-t0r" id="Evf-RA-mU4"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
