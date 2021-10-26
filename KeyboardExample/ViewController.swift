@@ -87,6 +87,7 @@ class ViewController: UIViewController {
             print("\(name) \(email) \(phone) \(password)")
         }
         
+        
     }
 
 
